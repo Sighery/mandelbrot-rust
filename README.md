@@ -25,11 +25,15 @@ When you build it, the Rust compiler will create an executable on
 `target/release/mandelbrot`, however, you can just run it through `cargo` like:
 
 ```bash
-cargo run --release mandel.png 4000x3200 -1.20,0.35 -1,0.20
+cargo run --release mandel.png 9000x6000 -2,1 1,-1
 ```
 
-To get help, you can simply execute the program without any arguments. However,
-basic usage is this:
+This will produce something like the following image:
+
+![Complete Mandelbrot set](mandel.png)
+
+To get help, you can simply execute the program without any arguments and it
+will display this:
 
 ```
 mandelbrot FILE PIXELS UPPERLEFT LOWERRIGHT
@@ -39,11 +43,11 @@ To explain certain arguments:
 
 - **FILE**: A PNG filename, such as `mandel.png`.
 - **PIXELS**: Two positive numbers (integers) separated by `x`, such as
-  `4000x3200`.
+  `9000x6000`.
 - **UPPERLEFT**: Two decimal numbers (float), either positive or negative,
-  separated by `,`, such as `-1.20,0.35`.
+  separated by `,`, such as `-2,1`.
 - **LOWERRIGHT**: Two decimal numbers (float), either positive or negative,
-  separated by `,`, such as `-1,0.20`.
+  separated by `,`, such as `1,-1`.
 
 ---
 
